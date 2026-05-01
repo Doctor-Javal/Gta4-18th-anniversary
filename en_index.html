@@ -3,114 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Company - Niko Bellic 18 Years Later</title>
+    <title>GTA IV: 18 Years of Niko Bellic - Red Company</title>
     <style>
-        body { background-color: #121212; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; line-height: 1.8; padding: 20px; max-width: 900px; margin: auto; }
-        h1 { color: #ffffff; border-bottom: 3px solid #b71c1c; padding-bottom: 10px; text-transform: uppercase; }
+        body { background-color: #121212; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; padding: 20px; max-width: 1000px; margin: auto; }
+        h1 { color: #ffffff; border-bottom: 3px solid #b71c1c; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
         h2 { color: #b71c1c; margin-top: 40px; border-left: 5px solid #b71c1c; padding-left: 15px; }
-        h3 { color: #ffffff; margin-top: 0; }
-        .lang-switch { text-align: right; margin-bottom: 10px; }
-        .lang-switch a { color: #e0e0e0; text-decoration: none; margin-left: 15px; font-weight: bold; }
+        h3 { color: #ffffff; margin-top: 0; margin-bottom: 10px; }
+        
+        /* Language Switcher Style */
+        .lang-switch { text-align: right; margin-bottom: 20px; font-size: 0.9em; }
+        .lang-switch a { color: #e0e0e0; text-decoration: none; margin-left: 15px; font-weight: bold; transition: 0.3s; }
         .lang-switch a:hover { color: #b71c1c; }
-        .img-full { width: 100%; border-radius: 8px; margin: 20px 0; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; }
-        .gallery img { width: 30%; border-radius: 4px; border: 1px solid #444; transition: transform 0.3s; }
-        .gallery img:hover { transform: scale(1.05); border-color: #b71c1c; }
-        .citazione { font-family: 'Georgia', serif; font-style: italic; font-size: 1.1em; color: #bdc3c7; background: #1e1e1e; padding: 20px; border-left: 5px solid #b71c1c; margin: 20px 0; }
-        .spoiler { color: #ff5252; font-weight: bold; background: rgba(255, 82, 82, 0.1); padding: 10px; border: 1px dashed #ff5252; border-radius: 4px; text-align: center; }
+        .lang-switch a.active { color: #b71c1c; border-bottom: 2px solid #b71c1c; }
+
+        .img-full { width: 100%; border-radius: 4px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .gallery { display: flex; gap: 10px; justify-content: space-between; margin: 20px 0; }
+        .gallery img { width: 32%; border-radius: 4px; }
+        .citazione { font-family: 'Georgia', serif; font-style: italic; font-size: 1.2em; color: #bdc3c7; background: #1e1e1e; padding: 25px; border-left: 5px solid #b71c1c; margin: 30px 0; }
+        
+        .profile-card { background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #333; display: flex; align-items: flex-start; gap: 20px; }
+        .profile-card img { width: 180px; border-radius: 4px; flex-shrink: 0; }
+        .profile-content { flex-grow: 1; }
+        
         .evidenziato { color: #ffffff; font-weight: bold; border-bottom: 1px solid #b71c1c; }
-        .profile-card { background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .spoiler { color: #ff5252; font-weight: bold; background: rgba(255, 82, 82, 0.1); padding: 15px; border: 1px dashed #ff5252; border-radius: 4px; text-align: center; margin-top: 40px; }
+        footer { text-align: center; font-size: 0.8em; color: #666; margin-top: 60px; padding-bottom: 20px; }
+        
+        /* Character Borders */
+        .border-niko { border-left: 5px solid #b71c1c; }
+        .border-roman { border-left: 5px solid #ff9800; }
+        .border-jacob { border-left: 5px solid #4caf50; }
+        .border-dwayne { border-left: 5px solid #795548; }
+        .border-packie { border-left: 5px solid #2196f3; }
+        .border-elizabetta { border-left: 5px solid #e91e63; }
+        .border-johnny { border-left: 5px solid #607d8b; }
+        .border-francis { border-left: 5px solid #3f51b5; }
+        .border-gerry { border-left: 5px solid #00c853; }
+        .border-derrick { border-left: 5px solid #90a4ae; }
+        .border-ulp { border-left: 5px solid #ffeb3b; }
+        .border-vlad { border-left: 5px solid #546e7a; }
+        .border-dimitri { border-left: 5px solid #9c27b0; }
+
+        @media (max-width: 600px) {
+            .profile-card { flex-direction: column; align-items: center; text-align: center; }
+            .gallery { flex-direction: column; }
+            .gallery img { width: 100%; }
+        }
     </style>
 </head>
 <body>
 
     <div class="lang-switch">
         <a href="index.html">ITA 🇮🇹</a>
-        <a href="en_index.html" style="color: #b71c1c;">ENG 🇬🇧</a>
+        <a href="en_index.html" class="active">ENG 🇬🇧</a>
     </div>
 
-    <h1>GTA IV: 18 Years of Niko Bellic</h1>
+    <h1>GTA IV: 18 YEARS OF NIKO BELLIC</h1>
     
-    <img src="GTA_4_wallpaper.jpg" alt="GTA 4 Cover" class="img-full">
+    <img src="GTA_4_wallpaper.jpg" alt="GTA 4 Art" class="img-full">
 
     <h2>The Opening: Arrival in Liberty City</h2>
-    <p>
-        Niko Bellic steps off the <span class="evidenziato">Platypus</span> with one hope: to leave the shadows of war behind. 
-        As the ship docks in Broker, cousin Roman's promises of the "American Dream" echo in the air, 
-        but the reality is one of debts and old grudges.
-    </p>
+    <p>Niko Bellic steps off the <span class="evidenziato">Platypus</span> with one hope: to leave the shadows of war behind. As the ship docks in Broker, cousin Roman's promises of the "American Dream" echo in the air, but the reality is one of debts and old grudges.</p>
 
     <h2>The Law of Liberty City</h2>
     <p>Surviving in this city means being constantly under the watchful eye of the LCPD. Every street corner can turn into a trap.</p>
-    <img src="Niko_Bellic_stop_to_police.jpg" alt="Niko and the police" class="img-full">
+    <img src="Niko_Bellic_stop_to_police.jpg" alt="Niko and police" class="img-full">
 
     <div class="gallery">
-        <img src="Blocco_stradale_polizia_artwork.jpg" alt="Police blockade">
-        <img src="Niko_Bellic_rain.jpg" alt="Niko in the rain">
-        <img src="Liberty_City_night.jpg" alt="Liberty City at night">
+        <img src="Blocco_stradale_polizia_artwork.jpg" alt="LCPD">
+        <img src="Niko_Bellic_rain.jpg" alt="Niko Rain">
+        <img src="Liberty_City_night.jpg" alt="LC Night">
     </div>
 
     <div class="citazione">
-        "War is where the young and stupid are tricked by the old and bitter into killing each other."
+        "Life is complicated. I killed people, smuggled people, sold people. Maybe here, things will be different."
     </div>
 
-    <h2>Protagonists & Key Figures</h2>
-    <p>Everything you need to know about the players dominating the streets of Liberty City without spoiling the story.</p>
+    <h2>Character Dossiers</h2>
 
-    <div class="profile-card" style="border-left: 5px solid #b71c1c;">
-        <img src="Niko_Bellic_artwork.jpg" alt="Niko Bellic" style="width: 150px; float: left; margin-right: 20px; border-radius: 5px;">
-        <h3>Niko Bellic</h3>
-        <p><strong>Background:</strong> Former soldier and veteran of the Yugoslav Wars.<br>
-        <strong>Affiliation:</strong> Independent (Freelance).<br>
-        <strong>Description:</strong> He arrives in America to find someone who betrayed his unit years ago. He is a tactical expert, capable of extreme coldness but bound by deep loyalty to family.</p>
-        <div style="clear: both;"></div>
+    <div class="profile-card border-niko">
+        <img src="Niko_Bellic_artwork.jpg" alt="Niko">
+        <div class="profile-content">
+            <h3>Niko Bellic</h3>
+            <p><strong>Background:</strong> Former soldier and Balkan War veteran.</p>
+            <p><strong>Affiliation:</strong> Independent (Freelance).</p>
+            <p><strong>Description:</strong> Cynical and haunted, Niko seeks redemption in America. His personality is defined by fierce family loyalty mixed with cold military expertise. His story is a flight from a past that eventually catches up to him in Liberty City.</p>
+        </div>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #2e7d32;">
-        <img src="Little_Jacob_artwork_1.jpg" alt="Little Jacob" style="width: 150px; float: right; margin-left: 20px; border-radius: 5px;">
-        <h3>Little Jacob</h3>
-        <p><strong>Background:</strong> Jamaican arms dealer and key figure in Dukes.<br>
-        <strong>Gang:</strong> Jamaican Yardies.<br>
-        <strong>Description:</strong> Niko’s closest ally. Jacob is a man of honor in a world of snitches. He manages high-end weapon trades and is the right hand to gang leader Badman.</p>
-        <div style="clear: both;"></div>
+    <div class="profile-card border-roman">
+        <img src="Roman_Bellic_artwork.jpg" alt="Roman">
+        <div class="profile-content">
+            <h3>Roman Bellic</h3>
+            <p><strong>Background:</strong> Niko's cousin and owner of a taxi depot in Broker.</p>
+            <p><strong>Affiliation:</strong> Bellic Enterprises.</p>
+            <p><strong>Description:</strong> An incurable optimist and lover of luxury, Roman drags Niko into trouble due to his gambling debts. Despite his cowardice, his affectionate nature represents Niko's only link to a normal life.</p>
+        </div>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #1565c0;">
-        <img src="Packie_McReary_artwork.jpg" alt="Packie McReary" style="width: 150px; float: left; margin-right: 20px; border-radius: 5px;">
-        <h3>Patrick "Packie" McReary</h3>
-        <p><strong>Background:</strong> The youngest of the McReary crime family from Dukes.<br>
-        <strong>Affiliation:</strong> Irish Mob.<br>
-        <strong>Description:</strong> An expert, impulsive bank robber. Packie is a pure street soldier who sees Niko as a kindred spirit. He is the key to the city's most daring heists.</p>
-        <div style="clear: both;"></div>
+    <div class="profile-card border-jacob">
+        <img src="Little_Jacob_artwork_1.jpg" alt="Little Jacob">
+        <div class="profile-content">
+            <h3>Little Jacob</h3>
+            <p><strong>Background:</strong> Jamaican arms dealer based in Dukes.</p>
+            <p><strong>Affiliation:</strong> Yardies.</p>
+            <p><strong>Description:</strong> Loyal and spiritual, Jacob is Niko's closest ally. His calm personality and strong code of honor make him a pillar of stability in a world of traitors.</p>
+        </div>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #fbc02d;">
-        <img src="Ray_Boccino_artwork.jpg" alt="Ray Boccino" style="width: 150px; float: right; margin-left: 20px; border-radius: 5px;">
-        <h3>Ray Boccino</h3>
-        <p><strong>Background:</strong> "Caporegime" for the Pegorino crime family.<br>
-        <strong>Family:</strong> Pegorino Family (Alderney).<br>
-        <strong>Description:</strong> Slimy and ambitious. Ray operates out of his pizzeria in Alderney. He is the classic mobster who uses Niko as a pawn to climb the ranks of Cosa Nostra.</p>
-        <div style="clear: both;"></div>
+    <div class="profile-card border-dwayne">
+        <img src="Dwayne_Forge_wallpaper.jpg" alt="Dwayne">
+        <div class="profile-content">
+            <h3>Dwayne Forge</h3>
+            <p><strong>Background:</strong> Old-school North Holland boss, recently released from prison.</p>
+            <p><strong>Affiliation:</strong> North Holland Gang (Former Leader).</p>
+            <p><strong>Description:</strong> Melancholic and disillusioned, Dwayne embodies the failure of old-style crime. His story is marked by depression over his lost empire, finding in Niko a friend who understands the weight of betrayal.</p>
+        </div>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #7b1fa2;">
-        <img src="Dimitri_Rascallov_artwork.jpg" alt="Dimitri Rascalov" style="width: 150px; float: left; margin-right: 20px; border-radius: 5px;">
-        <h3>Dimitri Rascalov</h3>
-        <p><strong>Background:</strong> Strategic mastermind of the Russian crime syndicate.<br>
-        <strong>Affiliation:</strong> Russian Mafia (Bratva).<br>
-        <strong>Description:</strong> A man who believes only in opportunism. Beneath a calm facade, he hides a manipulative nature. He views friendship as a liability.</p>
-        <div style="clear: both;"></div>
+    <div class="profile-card border-packie">
+        <img src="Packie_McReary_artwork.jpg" alt="Packie">
+        <div class="profile-content">
+            <h3>Patrick "Packie" McReary</h3>
+            <p><strong>Background:</strong> The youngest and most impulsive of the McReary family.</p>
+            <p><strong>Affiliation:</strong> Irish Mob.</p>
+            <p><strong>Description:</strong> Expert thief and pure street man. Packie is bonded to Niko by a friendship born under fire. His chaotic personality hides deep pain for his family's decline.</p>
+        </div>
     </div>
 
-    <h2>Is the American Dream an Illusion?</h2>
-    <p>
-        Unlike others, Niko doesn't seek power. His search for Florian Cravic and Darko Brevic leads him to discover that the past cannot be erased. 
-        Liberty City is not a land of opportunity, but a labyrinth where every action has a price paid in blood.
-    </p>
+    <div class="profile-card border-elizabetta">
+        <img src="Elizabetta_Torres_artwork.jpg" alt="Elizabetta">
+        <div class="profile-content">
+            <h3>Elizabetta Torres</h3>
+            <p><strong>Background:</strong> Drug trafficking queen in Bohan for over a decade.</p>
+            <p><strong>Affiliation:</strong> Independent.</p>
+            <p><strong>Description:</strong> Authoritative but worn down by paranoia. Her story shows the collapse of a criminal empire under police pressure, turning her strong character into unstable fury.</p>
+        </div>
+    </div>
 
-    <p class="spoiler">SPOILER WARNING: The final choice between Revenge and Deal offers no true victory, only different shades of loss.</p>
+    <div class="profile-card border-johnny">
+        <img src="Johnny_Klebitz_wallpaper.jpg" alt="Johnny">
+        <div class="profile-content">
+            <h3>Johnny Klebitz</h3>
+            <p><strong>Background:</strong> Vice President and operational leader of the Lost MC.</p>
+            <p><strong>Affiliation:</strong> The Lost MC.</p>
+            <p><strong>Description:</strong> Pragmatic and protective of his "brotherhood." Johnny is a biker trying to balance honor and survival in a gang war he didn't seek.</p>
+        </div>
+    </div>
 
-    <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 50px;">© 2026 Red Company - Created for the GTA IV community</p>
+    <div class="profile-card border-francis">
+        <img src="Francis_McReary_wallpaper.jpg" alt="Francis">
+        <div class="profile-content">
+            <h3>Francis McReary</h3>
+            <p><strong>Background:</strong> Corrupt Deputy Police Commissioner.</p>
+            <p><strong>Affiliation:</strong> LCPD.</p>
+            <p><strong>Description:</strong> Hypocritical and manipulative. He uses Niko to clean up his criminal past in exchange for silence, representing the moral corruption of Liberty City's institutions.</p>
+        </div>
+    </div>
+
+    <div class="profile-card border-gerry">
+        <img src="Gerry_McReary_wallpaper.jpg" alt="Gerry">
+        <div class="profile-content">
+            <h3>Gerald "Gerry" McReary</h3>
+            <p><strong>Background:</strong> The criminal mastermind of the McRearys.</p>
+            <p><strong>Affiliation:</strong> Irish Mob.</p>
+            <p><strong>Description:</strong> Cold and calculating, Gerry plans the family's moves even from prison. He trusts no one and sees the world only through the lens of power and control.</p>
+        </div>
+    </div>
+
+    <div class="profile-card border-derrick">
+        <img src="Derrick_McReary_artwork.jpg" alt="Derrick">
+        <div class="profile-content">
+            <h3>Derrick McReary</h3>
+            <p><strong>Background:</strong> Former IRA bomber with a past of exile.</p>
+            <p><strong>Affiliation:</strong> Irish Mob (Inactive).</p>
+            <p><strong>Description:</strong> Broken by guilt and addiction, Derrick is the shadow of a man. His fragile personality makes him the weakest and most tragic link of the McReary family.</p>
+        </div>
+    </div>
+
+    <div class="profile-card border-ulp">
+        <img src="ULP_wallpaper.jpg" alt="ULP">
+        <div class="profile-content">
+            <h3>United Liberty Paper Man</h3>
+            <p><strong>Background:</strong> Undercover government agent.</p>
+            <p><strong>Affiliation:</strong> United States Government.</p>
+            <p><strong>Description:</strong> Sophisticated, mysterious, and ruthless. He treats Niko as a disposable asset, showing that true power in Liberty City lies in government offices, not on the streets.</p>
+        </div>
+    </div>
+
+    <div class="profile-card border-vlad">
+        <img src="Vlad_Glebov_artwork.jpg" alt="Vlad">
+        <div class="profile-content">
+            <h3>Vlad Glebov</h3>
+            <p><strong>Background:</strong> Low-level Russian loan shark.</p>
+            <p><strong>Affiliation:</strong> Russian Mob.</p>
+            <p><strong>Description:</strong> Bullying and arrogant, Vlad makes the fatal mistake of underestimating Niko. His death triggers the war with the major Russian families.</p>
+        </div>
+    </div>
+
+    <div class="profile-card border-dimitri">
+        <img src="Dimitri_Rascalov_artwork.jpg" alt="Dimitri">
+        <div class="profile-content">
+            <h3>Dimitri Rascalov</h3>
+            <p><strong>Background:</strong> Russian criminal mastermind and primary antagonist.</p>
+            <p><strong>Affiliation:</strong> Russian Mob.</p>
+            <p><strong>Description:</strong> A pure manipulator. Dimitri doesn't believe in honor, only opportunism. He is the dark reflection of the betrayal Niko has tried to escape his entire life.</p>
+        </div>
+    </div>
+
+    <div class="spoiler">
+        SPOILER WARNING: Revenge is a dish best served as it consumes the soul.
+    </div>
+
+    <footer>
+        © 2026 Red Company - Created for the GTA IV community
+    </footer>
 
 </body>
 </html>
