@@ -14,12 +14,16 @@
         .lang-switch a:hover { color: #b71c1c; }
         .img-full { width: 100%; border-radius: 8px; margin: 20px 0; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; }
-        .gallery img { width: 30%; border-radius: 4px; border: 1px solid #444; transition: transform 0.3s; }
-        .gallery img:hover { transform: scale(1.05); border-color: #b71c1c; }
+        .gallery img { width: 30%; border-radius: 4px; border: 1px solid #444; }
         .citazione { font-family: 'Georgia', serif; font-style: italic; font-size: 1.1em; color: #bdc3c7; background: #1e1e1e; padding: 20px; border-left: 5px solid #b71c1c; margin: 20px 0; }
         .spoiler { color: #ff5252; font-weight: bold; background: rgba(255, 82, 82, 0.1); padding: 10px; border: 1px dashed #ff5252; border-radius: 4px; text-align: center; }
         .evidenziato { color: #ffffff; font-weight: bold; border-bottom: 1px solid #b71c1c; }
-        .profile-card { background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .profile-card { background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #333; transition: 0.3s; }
+        .profile-card:hover { border-color: #b71c1c; transform: translateY(-3px); }
+        .profile-card img { width: 150px; border-radius: 5px; }
+        .img-left { float: left; margin-right: 20px; }
+        .img-right { float: right; margin-left: 20px; }
+        .clearfix::after { content: ""; clear: both; display: table; }
     </style>
 </head>
 <body>
@@ -31,19 +35,15 @@
 
     <h1>GTA IV: 18 Anni di Niko Bellic</h1>
     
-    <img src="GTA_4_wallpaper.jpg" alt="GTA 4 Copertina" class="img-full">
+    <img src="GTA_4_wallpaper.jpg" alt="GTA 4 Wallpaper" class="img-full">
 
     <h2>L'Incipit: L'Arrivo a Liberty City</h2>
-    <p>
-        Niko Bellic scende dalla <span class="evidenziato">Platypus</span> con una speranza: lasciarsi alle spalle le ombre della guerra. 
-        Mentre la nave attracca a Broker, le promesse del cugino Roman sul "Sogno Americano" risuonano nell'aria, 
-        ma la realtà è fatta di debiti e vecchi rancori.
-    </p>
+    <p>Niko Bellic scende dalla <span class="evidenziato">Platypus</span> con una speranza: lasciarsi alle spalle le ombre della guerra. Mentre la nave attracca a Broker, le promesse del cugino Roman sul "Sogno Americano" risuonano nell'aria, ma la realtà è fatta di debiti e vecchi rancori.</p>
 
     <h2>La Legge di Liberty City</h2>
     <p>Sopravvivere in questa città significa essere costantemente sotto l'occhio vigile della LCPD. Ogni angolo di strada può trasformarsi in una trappola.</p>
     <img src="Niko_Bellic_stop_to_police.jpg" alt="Niko e la polizia" class="img-full">
-    
+
     <div class="gallery">
         <img src="Blocco_stradale_polizia_artwork.jpg" alt="Blocco stradale">
         <img src="Niko_Bellic_rain.jpg" alt="Niko nella pioggia">
@@ -54,63 +54,118 @@
         "Life is complicated. I killed people, smuggled people, sold people. Maybe here, things will be different."
     </div>
 
-    <h2>Protagonisti e Figure Chiave</h2>
-    <p>Tutto quello che c'è da sapere sulle figure che dominano le strade di Liberty City senza rovinarvi la trama.</p>
+    <h2>Dossier Personaggi</h2>
 
-    <div class="profile-card" style="border-left: 5px solid #b71c1c;">
-        <img src="Niko_Bellic_artwork.jpg" alt="Niko Bellic" style="width: 150px; float: left; margin-right: 20px; border-radius: 5px;">
+    <div class="profile-card clearfix" style="border-left: 5px solid #b71c1c;">
+        <img src="Niko_Bellic_artwork.jpg" alt="Niko" class="img-left">
         <h3>Niko Bellic</h3>
-        <p><strong>Background:</strong> Ex soldato veterano delle guerre jugoslave.<br>
+        <p><strong>Background:</strong> Ex soldato veterano delle guerre balcaniche.<br>
         <strong>Affiliazione:</strong> Indipendente (Freelance).<br>
-        <strong>Descrizione:</strong> Giunge in America non per ricchezza, ma per trovare qualcuno che ha tradito la sua unità anni prima. È un operativo tattico esperto, capace di freddezza estrema ma legato da una profonda lealtà verso la famiglia.</p>
-        <div style="clear: both;"></div>
+        <strong>Descrizione:</strong> Cinico e tormentato, Niko cerca redenzione in America. La sua personalità è definita da un forte senso di lealtà familiare unito a una fredda competenza militare. La sua storia è una fuga dal passato che finisce per rincorrerlo nelle strade di Liberty City.</p>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #2e7d32;">
-        <img src="Little_Jacob_artwork_1.jpg" alt="Little Jacob" style="width: 150px; float: right; margin-left: 20px; border-radius: 5px;">
+    <div class="profile-card clearfix" style="border-left: 5px solid #ff9800;">
+        <img src="Roman_Bellic_artwork.jpg" alt="Roman" class="img-right">
+        <h3>Roman Bellic</h3>
+        <p><strong>Background:</strong> Cugino di Niko e proprietario di un deposito taxi a Broker.<br>
+        <strong>Affiliazione:</strong> Bellic Enterprises.<br>
+        <strong>Descrizione:</strong> Ottimista incurabile e amante del lusso, Roman trascina Niko nei guai a causa dei suoi debiti di gioco. Nonostante la sua codardia, il suo carattere affettuoso rappresenta l'unico legame di Niko con una vita normale.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #2e7d32;">
+        <img src="Little_Jacob_artwork_1.jpg" alt="Little Jacob" class="img-left">
         <h3>Little Jacob</h3>
-        <p><strong>Background:</strong> Trafficante d'armi giamaicano e figura di spicco a Dukes.<br>
-        <strong>Gang:</strong> Yardies giamaicani.<br>
-        <strong>Descrizione:</strong> Il miglior alleato di Niko. Jacob è un uomo d'onore in un mondo di traditori. Gestisce il commercio di armi pesanti ed è il braccio destro del leader Badman.</p>
-        <div style="clear: both;"></div>
+        <p><strong>Background:</strong> Trafficante d'armi giamaicano basato a Dukes.<br>
+        <strong>Affiliazione:</strong> Yardies.<br>
+        <strong>Descrizione:</strong> Leale e spirituale, Jacob è il più stretto alleato di Niko. La sua personalità calma e il suo forte codice d'onore lo rendono un pilastro di stabilità in un mondo di traditori.</p>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #1565c0;">
-        <img src="Packie_McReary_artwork.jpg" alt="Packie McReary" style="width: 150px; float: left; margin-right: 20px; border-radius: 5px;">
+    <div class="profile-card clearfix" style="border-left: 5px solid #5d4037;">
+        <img src="Dwayne_Forge_wallpaper.jpg" alt="Dwayne" class="img-right">
+        <h3>Dwayne Forge</h3>
+        <p><strong>Background:</strong> Ex boss di North Holland, recentemente uscito di prigione.<br>
+        <strong>Affiliazione:</strong> North Holland Gang (Ex Capo).<br>
+        <strong>Descrizione:</strong> Malinconico e deluso, Dwayne incarna il fallimento del crimine vecchio stile. La sua storia è segnata dalla depressione per aver perso il suo impero, trovando in Niko un amico che comprende il peso del tradimento.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #1565c0;">
+        <img src="Packie_McReary_artwork.jpg" alt="Packie" class="img-left">
         <h3>Patrick "Packie" McReary</h3>
-        <p><strong>Background:</strong> Il più giovane della famiglia criminale McReary di Dukes.<br>
-        <strong>Affiliazione:</strong> Mafia Irlandese (Irish Mob).<br>
-        <strong>Descrizione:</strong> Un rapinatore di banche esperto e impulsivo. Packie è un uomo di strada puro che vede in Niko uno spirito affine. È la chiave per le operazioni più audaci della città.</p>
-        <div style="clear: both;"></div>
+        <p><strong>Background:</strong> Il più giovane e impulsivo della famiglia McReary.<br>
+        <strong>Affiliazione:</strong> Mafia Irlandese.<br>
+        <strong>Descrizione:</strong> Ladro esperto e uomo di strada puro. Packie è legato a Niko da un'amicizia nata sotto il fuoco delle sparatorie. La sua personalità caotica nasconde un profondo dolore per il declino della sua famiglia.</p>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #fbc02d;">
-        <img src="Ray_Boccino_artwork.jpg" alt="Ray Boccino" style="width: 150px; float: right; margin-left: 20px; border-radius: 5px;">
-        <h3>Ray Boccino</h3>
-        <p><strong>Background:</strong> "Caporegime" della famiglia mafiosa Pegorino.<br>
-        <strong>Famiglia:</strong> Famiglia Pegorino (Alderney).<br>
-        <strong>Descrizione:</strong> Viscido e ambizioso. Ray opera dal retro della sua pizzeria ad Alderney. È il classico mafioso che usa Niko come pedina per scalare i ranghi di Cosa Nostra.</p>
-        <div style="clear: both;"></div>
+    <div class="profile-card clearfix" style="border-left: 5px solid #c2185b;">
+        <img src="Elizabetta_Torres_artwork.jpg" alt="Elizabetta" class="img-right">
+        <h3>Elizabetta Torres</h3>
+        <p><strong>Background:</strong> Regina del narcotraffico a Bohan per oltre un decennio.<br>
+        <strong>Affiliazione:</strong> Indipendente.<br>
+        <strong>Descrizione:</strong> Autoritaria ma logorata dalla paranoia. La sua storia mostra il crollo di un impero criminale sotto la pressione della legge, trasformando il suo carattere forte in una furia instabile.</p>
     </div>
 
-    <div class="profile-card" style="border-left: 5px solid #7b1fa2;">
-        <img src="Dimitri_Rascallov_artwork.jpg" alt="Dimitri Rascalov" style="width: 150px; float: left; margin-right: 20px; border-radius: 5px;">
+    <div class="profile-card clearfix" style="border-left: 5px solid #212121;">
+        <img src="Johnny_Klebitz_wallpaper.jpg" alt="Johnny" class="img-left">
+        <h3>Johnny Klebitz</h3>
+        <p><strong>Background:</strong> Vicepresidente e leader operativo dei Lost MC.<br>
+        <strong>Affiliazione:</strong> The Lost MC.<br>
+        <strong>Descrizione:</strong> Pragmatico e protettivo verso la sua "fratellanza". Johnny è un biker che cerca di bilanciare onore e sopravvivenza in una guerra tra gang che non ha cercato.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #0d47a1;">
+        <img src="Francis_McReary_wallpaper.jpg" alt="Francis" class="img-right">
+        <h3>Francis McReary</h3>
+        <p><strong>Background:</strong> Vicecommissario di polizia corrotto.<br>
+        <strong>Affiliazione:</strong> LCPD.<br>
+        <strong>Descrizione:</strong> Ipocrita e manipolatore. Usa Niko per ripulire il suo passato criminale in cambio di silenzio, rappresentando la corruzione morale delle istituzioni di Liberty City.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #1b5e20;">
+        <img src="Gerry_McReary_wallpaper.jpg" alt="Gerry" class="img-left">
+        <h3>Gerald "Gerry" McReary</h3>
+        <p><strong>Background:</strong> Mente criminale dei McReary.<br>
+        <strong>Affiliazione:</strong> Mafia Irlandese.<br>
+        <strong>Descrizione:</strong> Freddo e calcolatore, Gerry pianifica le mosse della famiglia anche dal carcere. Non si fida di nessuno e vede il mondo solo attraverso il prisma del potere e del controllo.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #455a64;">
+        <img src="Derrick_McReary_artwork.jpg" alt="Derrick" class="img-right">
+        <h3>Derrick McReary</h3>
+        <p><strong>Background:</strong> Ex dinamitardo dell'IRA con un passato di esilio.<br>
+        <strong>Affiliazione:</strong> Mafia Irlandese (Inattivo).<br>
+        <strong>Descrizione:</strong> Distrutto dai sensi di colpa e dalle dipendenze, Derrick è l'ombra di un uomo. La sua personalità fragile lo rende l'anello debole e più tragico della famiglia McReary.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #ffeb3b;">
+        <img src="ULP_wallpaper.jpg" alt="ULP Agent" class="img-left">
+        <h3>Uomo dell'United Liberty Paper</h3>
+        <p><strong>Background:</strong> Agente governativo sotto copertura.<br>
+        <strong>Affiliazione:</strong> Governo degli Stati Uniti.<br>
+        <strong>Descrizione:</strong> Colto, misterioso e spietato. Tratta Niko come una risorsa sacrificabile, dimostrando come il vero potere a Liberty City non risieda nelle strade, ma negli uffici governativi.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #607d8b;">
+        <img src="Vlad_Glebov_artwork.jpg" alt="Vlad" class="img-right">
+        <h3>Vlad Glebov</h3>
+        <p><strong>Background:</strong> Strozzino russo di basso livello.<br>
+        <strong>Affiliazione:</strong> Mafia Russa.<br>
+        <strong>Descrizione:</strong> Bullo e arrogante, Vlad commette l'errore fatale di sottovalutare Niko. La sua morte scatena la guerra con le grandi famiglie russe.</p>
+    </div>
+
+    <div class="profile-card clearfix" style="border-left: 5px solid #7b1fa2;">
+        <img src="Dimitri_Rascalov_artwork.jpg" alt="Dimitri" class="img-left">
         <h3>Dimitri Rascalov</h3>
-        <p><strong>Background:</strong> Mente strategica del sindacato criminale russo.<br>
-        <strong>Affiliazione:</strong> Mafia Russa (Bratva).<br>
-        <strong>Descrizione:</strong> Un uomo che crede solo nell'opportunismo. Sotto una facciata di calma nasconde una natura manipolatoria. Considera l'amicizia un punto debole.</p>
-        <div style="clear: both;"></div>
-  
-  </div>
-<h2>Il Sogno Americano è un'illusione?</h2>
-    <p>
-        A differenza di altri, Niko non cerca il potere. La sua ricerca di Florian Cravic e Darko Brevic lo porterà a scoprire che il passato non si può cancellare. 
-        Liberty City non è una terra di opportunità, ma un labirinto dove ogni azione ha un prezzo di sangue.
-    </p>
+        <p><strong>Background:</strong> Mente criminale russa e principale antagonista.<br>
+        <strong>Affiliazione:</strong> Mafia Russa.<br>
+        <strong>Descrizione:</strong> Manipolatore puro. Dimitri non crede nell'onore, ma solo nell'opportunismo. È il riflesso oscuro del tradimento che Niko ha cercato di fuggire per tutta la vita.</p>
+    </div>
 
-    <p class="spoiler">ATTENZIONE SPOILER: La scelta finale tra Vendetta e Affare non offre una vera vittoria, ma solo diverse sfumature di perdita.</p>
+    <div class="spoiler">
+        ATTENZIONE SPOILER: La vendetta è un piatto che si consuma insieme all'anima.
+    </div>
 
-    <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 50px;">© 2026 Red Company - Creato per la community di GTA IV</p>
+    <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 50px;">© 2026 Red Company</p>
 
 </body>
 </html>
+   
